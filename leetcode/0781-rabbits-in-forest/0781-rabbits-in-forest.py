@@ -4,10 +4,12 @@ class Solution:
 
         count = Counter(answers)
 
+        print(count)
+
         for answer, freq in count.items():
             same_color = answer + 1
 
-            groups = (freq + same_color - 1)  // same_color
+            groups = (freq + answer)  // same_color
 
             result += groups * same_color
 
