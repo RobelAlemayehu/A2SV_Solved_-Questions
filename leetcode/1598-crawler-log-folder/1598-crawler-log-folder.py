@@ -6,9 +6,10 @@ class Solution:
             if log == "./":
                 continue
             elif log == "../":
-                if stack: 
+                if stack:
                     stack.pop()
             else:
                 stack.append(log)
+        
 
         return len(stack)
